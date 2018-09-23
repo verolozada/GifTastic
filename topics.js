@@ -59,20 +59,22 @@ $(document).ready(function () {
                     // animate gifs
                     function animate() {
                         $("#gifDiv").on("click", ".gif-" + j, function () {
+                        // to see if the image is paused or not. 
                         let state = $(this).attr("data-state");
+                        // in case of being paused, unpause it
                         if (state === "still") {
-                            image.attr("src", result[j].images.fixed_width.url)
+                            image.attr("src", result[j].images.fixed_width.url) //animated image
                             image.attr("data-state", "animate");
-                        } else {
-                            image.attr("src",result[j].images.fixed_width_still.url)
+                        } 
+                        // in case of being animated, pause it
+                        else {
+                            image.attr("src",result[j].images.fixed_width_still.url) //still image
                             image.attr("data-state", "still");
                         }
                         });
                     }
                     animate();
-
                 }
-
             });
         })
     }
