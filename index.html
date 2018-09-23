@@ -25,10 +25,42 @@
         -o-background-size: cover;
         background-size: cover;
     }
+
+    #sitcom-form {
+        background: white;
+    }
+
+    .newDiv {
+        background: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+        width: 300px;
+    }
+
+    .rating {
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    img{
+        width: 300px;
+    }
 </style>
 
 <body>
-    <div id="titles"></div>
+    <div class="row">
+        <div class="col-md-8">
+            <div id="titles"></div>
+        </div>
+        <div class="col-md-4">
+            <form id="sitcom-form">
+                <label for="sitcom-input">Add a Sitcom!</label>
+                <input type="text" id="sitcom-input">
+                <input id="add-sitcom" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div id="gifDiv"></div>
 
 </body>
 
