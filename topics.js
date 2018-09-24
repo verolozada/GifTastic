@@ -59,18 +59,18 @@ $(document).ready(function () {
                     // animate gifs
                     function animate() {
                         $("#gifDiv").on("click", ".gif-" + j, function () {
-                        // to see if the image is paused or not. 
-                        let state = $(this).attr("data-state");
-                        // in case of being paused, unpause it
-                        if (state === "still") {
-                            image.attr("src", result[j].images.fixed_width.url) //animated image
-                            image.attr("data-state", "animate");
-                        } 
-                        // in case of being animated, pause it
-                        else {
-                            image.attr("src",result[j].images.fixed_width_still.url) //still image
-                            image.attr("data-state", "still");
-                        }
+                            // to see if the image is paused or not. 
+                            let state = $(this).attr("data-state");
+                            // in case of being paused, unpause it
+                            if (state === "still") {
+                                image.attr("src", result[j].images.fixed_width.url) //animated image
+                                image.attr("data-state", "animate");
+                            }
+                            // in case of being animated, pause it
+                            else {
+                                image.attr("src", result[j].images.fixed_width_still.url) //still image
+                                image.attr("data-state", "still");
+                            }
                         });
                     }
                     animate();
@@ -85,7 +85,6 @@ $(document).ready(function () {
     $("#add-sitcom").on("click", function (event) {
         //allows to add a new sitcom with the enter key
         event.preventDefault();
-
         //grab value from the user
         var newSitcom = $("#sitcom-input").val().trim();
         topics.push(newSitcom);
@@ -94,6 +93,19 @@ $(document).ready(function () {
 
     buttons();
     generator();
+
+
+    let URL = "https://api.giphy.com/v1/gifs/search?q=laugh&api_key=SbCSA3fSSOWvUtm8kB82oS0mjyKwICEG&limit=10";
+
+    $.ajax({
+        url: URL,
+        method: "GET"
+    }).then(function (response) {
+        const imgGif = $("<img>")
+        imgGif.attr("src", response.data[0].images.fixed_width.url)
+        imgGif.addClass("sub");
+        $("#otherGif").append(imgGif);
+    })
 
 });
 

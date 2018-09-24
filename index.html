@@ -11,26 +11,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Neucha|Dosis" rel="stylesheet">
 
 </head>
 
 
 <body>
-
-
+    <nav class="navbar">
+        <h1> GifTastic Sitcom Time</h1>
+    </nav>
     <div class="row">
-        <div class="col-md-8">
-            <div id="titles"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <div class="container">
+                <div id="titles"></div>
+                <div id="gifDiv"></div>
+            </div>
         </div>
         <div class="col-md-4">
             <form id="sitcom-form">
+                <div class="new">Another Idea?</div>
                 <label for="sitcom-input">Add a Sitcom!</label>
                 <input type="text" id="sitcom-input">
                 <input id="add-sitcom" type="submit" value="Submit">
+                <div id="otherGif"></div>
             </form>
         </div>
+        <div class="col-md-1"></div>
     </div>
-    <div id="gifDiv"></div>
 
 </body>
 
