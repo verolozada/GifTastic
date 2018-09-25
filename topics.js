@@ -23,10 +23,10 @@ $(document).ready(function () {
         $("#titles").on("click", ".btn", function () {
             $("#gifDiv").empty();
             let userChoice = $(this).attr("data-name");
-            console.log(userChoice);
+
             // URL from GIPHY
             let queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-                userChoice + "&api_key=SbCSA3fSSOWvUtm8kB82oS0mjyKwICEG&limit=10";
+                userChoice + "&api_key=SbCSA3fSSOWvUtm8kB82oS0mjyKwICEG&limit=20";
 
             $.ajax({
                 url: queryURL,
@@ -35,8 +35,8 @@ $(document).ready(function () {
                 console.log(response);
                 const result = response.data;
 
-                // show the 10 gifs
-                for (let j = 0; j < result.length; j++) {
+                // show the first 10 gifs
+                for (let j = 0; j < 10; j++) {
                     // new div to hold image
                     const newDiv = $("<div>")
                     newDiv.addClass("newDiv");
@@ -75,7 +75,39 @@ $(document).ready(function () {
                     }
                     animate();
                 }
+
+                //in case the user wants to see 10 more gifs
+                $("#add-more").on("click", function (event) {
+                    //allows to add more gifs with the enter key
+                    event.preventDefault();
+                    console.log(userChoice);
+
+                    for (let j = 11; j < 20; j++) {
+                        // new div to hold image
+                        const newDiv = $("<div>")
+                        newDiv.addClass("newDiv");
+
+                        // gif grabbed
+                        let image = $("<img>")
+                        image.attr("src", result[j].images.fixed_width_still.url);
+                        image.attr("data-state", "still")
+                        image.addClass("gif-" + j);
+
+                        // rating 
+                        let rating = $("<h6>")
+                        rating.text("Rating: " + result[j].rating);
+                        rating.addClass("rating");
+
+                        newDiv.append(image);
+                        newDiv.append(rating);
+                        $("#gifDiv").append(newDiv);
+                    }
+
+                })
+
             });
+
+
         })
     }
 
@@ -94,7 +126,7 @@ $(document).ready(function () {
     buttons();
     generator();
 
-
+    // gif for the add-form
     let URL = "https://api.giphy.com/v1/gifs/search?q=laugh&api_key=SbCSA3fSSOWvUtm8kB82oS0mjyKwICEG&limit=10";
 
     $.ajax({
