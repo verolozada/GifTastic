@@ -9,11 +9,10 @@ body {
 #sitcom-form {
     background: white;
     padding: 20px;
-    border-radius: 12px;
     text-align: center;
     font-weight: bold;
     overflow: auto;
-    border: 2px solid rgb(183, 170, 243);
+    border: 3px inset rgb(183, 170, 243);
     background-color: rgba(252, 252, 252, 0.7);
 }
 
@@ -41,11 +40,32 @@ img{
     align-content: center;
 }
 
-h1{
+
+
+ h1 {
     color: black;
     text-align: center;
     font-size: 40px;
-    font-family: "Chewy"}
+    font-family: "Chewy";
+    overflow: hidden; 
+    border-right: .15em solid rgb(241, 183, 75); 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(241, 183, 75); }
+  }
 
 .btn {
     border: 1px solid black;
@@ -87,10 +107,10 @@ h1{
 #tenMore {
     background: white;
     padding: 20px;
-    border-radius: 12px;
     text-align: center;
     font-weight: bold;
     overflow: auto;
-    border: 2px solid rgb(89, 156, 219);
+    border: 3px outset rgb(89, 156, 219);
     background-color: rgba(252, 252, 252, 0.7);
 }
+
