@@ -74,5 +74,23 @@ h1{
 .new {
     font-size: 30px;
     margin-bottom: 10px;
+}
 
+#add-more {
+    background: rgb(89, 156, 219);
+    border-radius: 10px;
+    margin-left: 10px;
+    font-family: "Dosis";
+    font-weight: bold;
+}
+
+#tenMore {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    overflow: auto;
+    border: 2px solid rgb(89, 156, 219);
+    background-color: rgba(252, 252, 252, 0.7);
 }
