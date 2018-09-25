@@ -40,8 +40,6 @@ img{
     align-content: center;
 }
 
-
-
  h1 {
     color: black;
     text-align: center;
@@ -53,7 +51,7 @@ img{
     margin: 0 auto; 
     letter-spacing: .15em; 
     animation: 
-      typing 3.5s steps(40, end),
+      typing 4.0s steps(40, end),
       blink-caret .75s step-end infinite;
   }
 
@@ -114,3 +112,6 @@ img{
     background-color: rgba(252, 252, 252, 0.7);
 }
 
+#titles{
+    margin-bottom: 50px;
+}
