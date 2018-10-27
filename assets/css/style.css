@@ -52,7 +52,7 @@ img{
     letter-spacing: .15em; 
     animation: 
       typing 4.0s steps(40, end),
-      blink-caret .75s step-end infinite;
+      blink-caret .80s step-end infinite;
   }
 
   @keyframes typing {
@@ -66,52 +66,52 @@ img{
   }
 
 .btn {
-    border: 1px solid black;
-    margin: 5px;
+    border: 0.06em solid black;
+    margin: 0.2em;
     font-family: "Neucha";
-    font-size: 20px;
+    font-size: 1.3em;
 }
 
 .row{
-    margin-bottom: 20px;
+    margin-bottom: 1em;
 }
 
 .sub{
-   margin: 10px 50px;
-   border-radius: 10px;
+   margin: 0.4em 1em;
+   border-radius: 0.1em;
 }
 
 #add-sitcom {
     background: rgb(183, 170, 243);
-    border-radius: 10px;
-    margin-left: 10px;
+    border-radius: 0.1em;
+    margin-left: 0.1em;
     font-family: "Dosis";
     font-weight: bold;
 }
 
 .new {
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-size: 1em;
+    margin-bottom: 0.1em;
 }
 
 #add-more {
     background: rgb(89, 156, 219);
-    border-radius: 10px;
-    margin-left: 10px;
+    border-radius: 0.1em;
+    margin-left: 0.1em;
     font-family: "Dosis";
     font-weight: bold;
 }
 
 #tenMore {
     background: white;
-    padding: 20px;
+    padding: 1em;
     text-align: center;
     font-weight: bold;
     overflow: auto;
-    border: 3px outset rgb(89, 156, 219);
+    border: 0.2em outset rgb(89, 156, 219);
     background-color: rgba(252, 252, 252, 0.7);
 }
 
 #titles{
-    margin-bottom: 50px;
+    margin-bottom: 1.8em;
 }

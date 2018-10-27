@@ -6,9 +6,9 @@
 
 * Just click on it and animate it!! Or pause it, whatever you want. 
 
-* If you have more sitcoms on mind just add them in the Add a Sitcom Box!
+* If you have more sitcoms on mind just add them into the Add a Sitcom Box!
 
-* Only 10 gifs? Well.. If you want more just click in the Want More Gifs Box!
+* Only 10 gifs? Well.. If you want more just click into the Want More Gifs Box!
 
 ### Enjoy!! 
 
